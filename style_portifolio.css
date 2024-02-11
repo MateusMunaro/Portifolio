@@ -1,0 +1,156 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*estilo base do loading*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Para esconder a barra de rolagem enquanto o loading está ativo */
+}
+
+.loading {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    z-index: 9999; /* Garante que o loading fica acima de outros elementos */
+}
+
+p.loading-text {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4em;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 2s ease-in-out forwards; /* Efeito de entrada gradual durante 2 segundos */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+/* estilo base da pagina*/
+
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+main{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8); /* Cor de fundo com opacidade (neste exemplo, branco com 70% de opacidade) */
+}
+
+.main_section {
+    border: 2px solid black;
+    margin: 15px;
+    padding: 20px;
+    height: 95vh;
+}
+
+.nome {
+    top: 3.5vh;
+    position: fixed;
+}
+
+.nome h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+}
+
+nav {
+    margin-top: 8vh;
+    
+}
+
+
+.list{
+    top: 10vh;
+    position: fixed;
+    display: flex;
+    list-style: none;
+    font-size: 1.6em;
+    flex-direction: column;
+    gap: 3vh;
+    position: relative;
+}
+
+ul a {
+    font-family: 'Concert One', sans-serif;
+    text-decoration: none;
+}
+
+.list a::after {
+    margin-top: 5px;
+    margin-left: 10px;
+    content: " ";
+    width: 0%;
+    height: 18px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+
+}
+
+ul a:hover::after{
+    width: 1.5%;
+}
+
+
+.box_list {
+    width: 50%;
+    margin-left: 50%;
+}
+.box_list p {
+    font-family: 'Concert One', sans-serif;
+    font-size: 2em;
+}
+.web {
+    list-style: none;
+    text-align: right;
+
+    
+}
+
+.web a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+
+}
+.python {
+    list-style: none;
+    text-align: right;
+}
+.python a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+}

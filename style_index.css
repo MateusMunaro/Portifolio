@@ -1,0 +1,165 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*estilo base do loading*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Para esconder a barra de rolagem enquanto o loading está ativo */
+}
+
+.loading {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    z-index: 9999; /* Garante que o loading fica acima de outros elementos */
+}
+
+p.loading-text {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4em;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 2s ease-in-out forwards; /* Efeito de entrada gradual durante 2 segundos */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* estilo base da pagina*/
+
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Para esconder a barra de rolagem enquanto o loading está ativo */
+    position: fixed; /* Fixa o body na posição, impedindo a rolagem */
+}
+
+main{
+    width: 100%; 
+    background: rgba(255, 255, 255, 0.1); /* Cor de fundo com opacidade (neste exemplo, branco com 70% de opacidade) */
+}
+
+.main_section {
+    position: relative;
+    z-index: 2;
+    border: 2px solid black;
+    margin: 15px;
+    padding: 20px;
+    height: 95vh;
+}
+.bolinha-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bolinha {
+    position: absolute;
+    background-color: #000;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    transition: transform 0.3s ease;
+}
+
+.conteudo {
+    position: relative;
+}
+
+
+.nome h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+}
+
+nav {
+    margin-top: 8vh;
+    
+}
+
+
+ul {
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    display: flex;
+    list-style: none;
+    font-size: 1.6em;
+    flex-direction: column;
+    gap: 3vh;
+    position: relative;
+    margin-right: 85%;
+    height: 25vh;
+}
+
+ul a {
+    font-family: 'Concert One', sans-serif;
+    text-decoration: none;
+}
+
+ul a::after {
+    margin-top: 5px;
+    margin-left: 10px;
+    content: " ";
+    width: 0%;
+    height: 18px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+
+}
+
+ul a:hover::after{
+    width: 8%;
+}
+
+.text {
+    z-index: 10;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: white;
+    margin-left: 77%;
+}
+
+.box_text {
+    font-size: 1.3em;
+    width: 100%;
+}
+
+.box_text p {
+    text-align: justify;
+    font-family: 'Concert One', sans-serif;
+}
+
